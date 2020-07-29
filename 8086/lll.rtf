@@ -1,0 +1,3364 @@
+{\rtf1\ansi\ansicpg1251\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-Oblique;\f2\fnil\fcharset0 Monaco;
+\f3\fmodern\fcharset0 Courier-Bold;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;\red43\green139\blue39;
+\red83\green83\blue83;\red0\green0\blue108;\red59\green158\blue7;\red251\green0\blue7;\red0\green0\blue255;
+\red106\green0\blue108;\red18\green139\blue2;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;\cssrgb\c20000\c60000\c20000;
+\cssrgb\c40000\c40000\c40000;\cssrgb\c0\c0\c49804;\cssrgb\c27451\c66667\c1176;\cssrgb\c100000\c0\c0;\cssrgb\c0\c0\c100000;
+\cssrgb\c49804\c0\c49804;\cssrgb\c0\c60000\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 \expnd0\expndtw0\kerning0
+\
+puts macro\cf4  \cf0 string
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1088 \u1086 \u1082 \u1080 
+\f0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\b \cf6 lea
+\f0\b0 \cf0  
+\f3\b \cf7 dx
+\f0\b0 \cf4 ,\cf0 string\
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 09h\cf0 \
+
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 21h\cf0 \
+endm\
+\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf4 .\cf0 model tiny\
+\cf4 .
+\f3\b \cf9 code
+\f0\b0 \cf0 \
+org \cf8 100h\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf8 .386\cf0 \
+
+\f3\b \cf9 start
+\f0\b0 \cf4 :\cf0 \
+
+\f3\b \cf6 jmp
+\f0\b0 \cf0  inst\
+Unloaded 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf10 'Drvinfo 
+\f2 \uc0\u1074 \u1099 \u1075 \u1088 \u1091 \u1078 \u1077 \u1085 
+\f0 $'\cf0 \
+AlreadyLoaded 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 'Drvinfo 
+\f2 \uc0\u1073 \u1099 \u1083 
+\f0  
+\f2 \uc0\u1079 \u1072 \u1075 \u1088 \u1091 \u1078 \u1077 \u1085 
+\f0  
+\f2 \uc0\u1088 \u1072 \u1085 \u1077 \u1077 
+\f0 '\cf4 ,\cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '$'\cf0 \
+inputdrv 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf10 '
+\f2 \uc0\u1042 \u1074 \u1077 \u1076 \u1080 \u1090 \u1077 
+\f0  
+\f2 \uc0\u1073 \u1091 \u1082 \u1074 \u1091 
+\f0  
+\f2 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 : $'\cf0 \
+drv 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1085 \u1086 \u1084 \u1077 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+wrongdrv 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1053 \u1077 \u1074 \u1077 \u1088 \u1085 \u1099 \u1081 
+\f0  
+\f2 \uc0\u1076 \u1080 \u1089 \u1082 
+\f0 .'\cf4 ,\cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '$'\cf0 \
+rp1 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1044 \u1080 \u1089 \u1082 
+\f0  *:'\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf4 	
+\f3\b \cf9 db
+\f0\b0 \cf4  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1054 \u1073 \u1098 \u1077 \u1084 
+\f0 : $'\cf0 \
+rp2 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf10 ' 
+\f2 \uc0\u1041 \u1072 \u1081 \u1090 
+\f0 '\cf0 \
+\cf4 	
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1057 \u1074 \u1086 \u1073 \u1086 \u1076 \u1085 \u1086 
+\f0 : $'\cf0 \
+rp3 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf10 ' 
+\f2 \uc0\u1041 \u1072 \u1081 \u1090 
+\f0 '\cf0 \
+\cf4 	
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1041 \u1072 \u1081 \u1090 
+\f0  
+\f2 \uc0\u1085 \u1072 
+\f0  
+\f2 \uc0\u1089 \u1077 \u1082 \u1090 \u1086 \u1088 
+\f0 : $'\cf0 \
+rp4 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1057 \u1077 \u1082 \u1090 \u1086 \u1088 \u1086 \u1074 
+\f0  
+\f2 \uc0\u1085 \u1072 
+\f0  
+\f2 \uc0\u1082 \u1083 \u1072 \u1089 \u1090 \u1077 \u1088 
+\f0 : $'\cf0 \
+rp5 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1050 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f0  
+\f2 \uc0\u1082 \u1086 \u1087 \u1080 \u1081 
+\f0  FAT: $'\cf0 \
+rp6 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1050 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f0  
+\f2 \uc0\u1082 \u1072 \u1090 \u1072 \u1083 \u1086 \u1075 \u1086 \u1074 
+\f0  
+\f2 \uc0\u1074 
+\f0  
+\f2 \uc0\u1082 \u1086 \u1088 \u1085 \u1077 
+\f0  
+\f2 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 : $'\cf0 \
+rp7 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1050 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f0  
+\f2 \uc0\u1089 \u1077 \u1082 \u1090 \u1086 \u1088 \u1086 \u1074 
+\f0  
+\f2 \uc0\u1074 
+\f0  
+\f2 \uc0\u1086 \u1076 \u1085 \u1086 \u1081 
+\f0  
+\f2 \uc0\u1082 \u1086 \u1087 \u1080 \u1080 
+\f0  FAT: $'\cf0 \
+anykey 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '
+\f2 \uc0\u1053 \u1072 \u1078 \u1084 \u1080 \u1090 \u1077 
+\f0  
+\f2 \uc0\u1083 \u1102 \u1073 \u1091 \u1102 
+\f0  
+\f2 \uc0\u1082 \u1083 \u1072 \u1074 \u1080 \u1096 \u1091 
+\f0  
+\f2 \uc0\u1076 \u1083 \u1103 
+\f0  
+\f2 \uc0\u1087 \u1088 \u1086 \u1076 \u1086 \u1083 \u1078 \u1077 \u1085 \u1080 \u1103 
+\f0 $'\cf0 \
+Sucsess 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 'Drvinfo 
+\f2 \uc0\u1079 \u1072 \u1075 \u1088 \u1091 \u1078 \u1077 \u1085 
+\f0 '\cf4 ,\cf8 13\cf4 ,\cf8 10\cf4 ,\cf10 '$'\cf0 \
+ctrl 
+\f3\b \cf9 db 
+\f0\b0 \cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1080 \u1079 \u1085 \u1072 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1083 \u1072 \u1074 \u1080 \u1096 \u1080 
+\f1\i  ctrl 0-
+\f2\i0 \uc0\u1086 \u1090 \u1078 \u1072 \u1090 \u1072 
+\f1\i , ff - 
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 \u1072 
+\f0 \cf0 \
+Old2D 
+\f3\b \cf9 dd
+\f0\b0 \cf0  ? 
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1077 \u1088 \u1074 \u1080 \u1088 \u1091 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1084 \u1077 \u1089 \u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1083 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1088 \u1080 \u1075 \u1080 \u1085 \u1072 \u1083 \u1100 \u1085 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1095 \u1080 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f1\i  2Dh
+\f0\i0 \cf0 \
+Old09 
+\f3\b \cf9 dd
+\f0\b0 \cf0  ? 
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1077 \u1088 \u1074 \u1080 \u1088 \u1091 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1084 \u1077 \u1089 \u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1083 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1088 \u1080 \u1075 \u1080 \u1085 \u1072 \u1083 \u1100 \u1085 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1095 \u1080 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f1\i  09h
+\f0\i0 \cf0 \
+\'a0\
+scrbuf 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 4000\cf0  dup 
+\f3\b \cf11 (
+\f0\b0 \cf8 0
+\f3\b \cf11 )
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1054 \u1073 \u1083 \u1072 \u1089 \u1090 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1084 \u1103 \u1090 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1083 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1077 \u1085 \u1080 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1077 \u1082 \u1089 \u1090 \u1086 \u1074 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 \u1072 
+\f0 \cf0 \
+old_f 
+\f3\b \cf9 dw
+\f0\b0 \cf0  \cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1056 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 \u1086 \u1074 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1072 \u1073 \u1086 \u1090 \u1072 \u1102 \u1097 \u1077 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1099 
+\f0 \cf0 \
+mode 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1088 \u1077 \u1078 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1072 \u1073 \u1086 \u1090 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1099 
+\f1\i  0 - 
+\f2\i0 \uc0\u1092 \u1086 \u1085 \u1086 \u1074 \u1099 \u1081 
+\f1\i  1- 
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1085 \u1086 \u1101 \u1082 \u1088 \u1072 \u1085 \u1085 \u1099 \u1081 
+\f0 \cf0 \
+curpos 
+\f3\b \cf9 dw
+\f0\b0 \cf0  \cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1090 \u1077 \u1082 \u1091 \u1097 \u1077 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1086 \u1078 \u1077 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1091 \u1088 \u1089 \u1086 \u1088 \u1072 
+\f1\i .
+\f0\i0 \cf0 \
+inp 
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf8 6\cf4 ,\cf8 7\cf0  dup
+\f3\b \cf11 (
+\f0\b0 \cf8 0
+\f3\b \cf11 )
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1090 \u1088 \u1086 \u1082 \u1072 
+\f1\i , 
+\f2\i0 \uc0\u1082 \u1091 \u1076 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1074 \u1086 \u1076 \u1080 \u1090 \u1089 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1088 \u1077 \u1084 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1091 \u1076 \u1080 \u1083 \u1100 \u1085 \u1080 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1089 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1083 \u1072 \u1074 \u1080 \u1072 \u1090 \u1091 \u1088 \u1099 
+\f1\i .
+\f0\i0 \cf0 \
+\'a0\
+New2DObrab proc 
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1085 \u1086 \u1074 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1095 \u1080 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f1\i  int2Dh
+\f0\i0 \cf0 \
+\'a0\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b \cf6 cli
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1079 \u1072 \u1087 \u1088 \u1077 \u1090 \u1080 \u1090 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1082 \u1091 
+\f1\i  
+\f2\i0 \uc0\u1084 \u1072 \u1089 \u1082 \u1080 \u1088 \u1086 \u1074 \u1072 \u1085 \u1085 \u1099 \u1093 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1081 
+\f1\i  (
+\f2\i0 \uc0\u1089 \u1073 \u1088 \u1086 \u1089 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f1\i  if=0)
+\f0\i0 \cf0 \
+
+\f3\b \cf6 pushf
+\f0\b0 \cf0 \
+
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 98h\cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1074 \u1077 \u1088 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i , 
+\f2\i0 \uc0\u1079 \u1072 \u1075 \u1088 \u1091 \u1078 \u1077 \u1085 
+\f1\i  
+\f2\i0 \uc0\u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1080 \u1076 \u1077 \u1085 \u1090 
+\f1\i ?
+\f0\i0 \cf0 \
+
+\f3\b \cf6 jne
+\f0\b0 \cf0  ex_c 
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1085 \u1077 \u1090 
+\f1\i  - 
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1087 \u1091 \u1089 \u1082 \u1072 \u1077 \u1084 
+\f0 \cf0 \
+
+\f3\b \cf6 inc
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1091 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  al=99h - 
+\f2\i0 \uc0\u1087 \u1088 \u1080 \u1079 \u1085 \u1072 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1086 \u1075 \u1086 
+\f1\i , 
+\f2\i0 \uc0\u1095 \u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1080 \u1076 \u1077 \u1085 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1075 \u1088 \u1091 \u1078 \u1077 \u1085 
+\f0 \cf0 \
+ex_c\cf4 :\cf0  
+\f3\b \cf6 popf
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1086 \u1074 \u1080 \u1090 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 \u1080 
+\f0 \cf0 \
+
+\f3\b \cf6 sti
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1088 \u1072 \u1079 \u1088 \u1077 \u1096 \u1080 \u1090 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+
+\f3\b \cf6 iret
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1074 \u1099 \u1093 \u1086 \u1076 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+\'a0\
+DoNothing\cf4 :\cf0 \
+\'a0\
+
+\f3\b \cf6 popf
+\f0\b0 \cf0 \
+
+\f3\b \cf6 sti
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1091 \u1089 \u1090 \u1072 \u1085 \u1086 \u1074 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f1\i  if 
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1077 \u1076 \u1080 \u1085 \u1080 \u1094 \u1091 
+\f0 \cf0 \
+
+\f3\b \cf6 jmp
+\f0\b0 \cf0  
+\f3\b \cf9 dword
+\f0\b0 \cf0  ptr 
+\f3\b \cf7 CS
+\f0\b0 \cf4 :
+\f3\b \cf11 [
+\f0\b0 \cf0 Old2D
+\f3\b \cf11 ]
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1077 \u1088 \u1077 \u1093 \u1086 \u1076 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1072 \u1083 \u1100 \u1085 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1095 \u1080 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+\'a0\
+endp\
+\'a0\
+New09Obrab proc 
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1085 \u1086 \u1074 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1095 \u1080 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f1\i  int09h
+\f0\i0 \cf0 \
+
+\f3\b \cf6 pushf
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1079 \u1072 \u1085 \u1086 \u1089 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1082 
+\f1\i , 
+\f2\i0 \uc0\u1087 \u1086 \u1089 \u1082 \u1086 \u1083 \u1100 \u1082 \u1091 
+\f1\i  iret 
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1085 \u1094 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1088 \u1080 \u1075 \u1080 \u1085 \u1072 \u1083 \u1100 \u1085 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1095 \u1080 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1073 \u1077 \u1088 \u1077 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1076 \u1080 \u1085 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1079 \u1077 \u1084 \u1087 \u1083 \u1103 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 \u1086 \u1074 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1082 \u1072 
+\f0 \cf0 \
+
+\f3\b \cf6 call
+\f0\b0 \cf0  
+\f3\b \cf9 dword
+\f0\b0 \cf0  ptr 
+\f3\b \cf7 CS
+\f0\b0 \cf4 :
+\f3\b \cf11 [
+\f0\b0 \cf0 Old09
+\f3\b \cf11 ]
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1074 \u1099 \u1079 \u1086 \u1074 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1088 \u1080 \u1075 \u1080 \u1085 \u1072 \u1083 \u1100 \u1085 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1095 \u1080 \u1082 \u1072 
+\f0 \cf0 \
+
+\f3\b \cf6 cli
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1079 \u1072 \u1087 \u1088 \u1077 \u1090 \u1080 \u1090 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+
+\f3\b \cf6 pusha
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1080 \u1090 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1097 \u1077 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1077 \u1075 \u1084 \u1077 \u1085 \u1090 \u1085 \u1099 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f1\i , 
+\f2\i0 \uc0\u1087 \u1086 \u1089 \u1082 \u1086 \u1083 \u1100 \u1082 \u1091 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1085 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1102 \u1090 \u1089 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1084 \u1072 \u1085 \u1076 \u1086 \u1081 
+\f1\i  pusha
+\f0\i0 \cf0 \
+
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 ds
+\f0\b0 \cf0 \
+
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 cs
+\f0\b0 \cf0  
+\f1\i \cf5 ;ds=cs
+\f0\i0 \cf0 \
+
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 ds
+\f0\b0 \cf0 \
+
+\f3\b \cf6 in
+\f0\b0 \cf4  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 60h\cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1095 \u1080 \u1090 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1086 \u1088 \u1090 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1083 \u1072 \u1074 \u1080 \u1072 \u1090 \u1091 \u1088 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1082 \u1072 \u1085 
+\f1\i -
+\f2\i0 \uc0\u1082 \u1086 \u1076 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1083 \u1072 \u1074 \u1080 \u1096 \u1080 
+\f0 \cf0 \
+
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 1dh\cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 
+\f1\i  CTRL
+\f0\i0 \cf0 \
+
+\f3\b \cf6 jnz
+\f0\b0 \cf0  m1\
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 cs
+\f0\b0 \cf4 :\cf0 ctrl\cf4 ,\cf8 1\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1091 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 
+\f0 \cf0 \
+m1\cf4 :\cf0 \
+
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 9dh\cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1090 \u1078 \u1072 \u1090 
+\f1\i  CTRL
+\f0\i0 \cf0 \
+
+\f3\b \cf6 jnz
+\f0\b0 \cf0  m2\
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 cs
+\f0\b0 \cf4 :\cf0 ctrl\cf4 ,\cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1073 \u1088 \u1072 \u1089 \u1099 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 
+\f0 \cf0 \
+m2\cf4 :\cf0 \
+
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 2dh\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 \u1072 
+\f1\i  X
+\f0\i0 \cf0 \
+
+\f3\b \cf6 jnz
+\f0\b0 \cf0  ne_x 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1077 \u1090 
+\f1\i , 
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1087 \u1091 \u1089 \u1090 \u1080 \u1090 \u1100 
+\f0 \cf0 \
+
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 cs
+\f0\b0 \cf4 :\cf0 ctrl\cf4 ,\cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  ctrl 
+\f2\i0 \uc0\u1085 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 \u1072 
+\f1\i , 
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1087 \u1091 \u1089 \u1090 \u1080 \u1090 \u1100 
+\f0 \cf0 \
+
+\f3\b \cf6 jz 
+\f0\b0 \cf0 ne_x\
+\pard\pardeftab720\partightenfactor0
+
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1053 \u1072 \u1078 \u1072 \u1090 \u1099 
+\f1\i  Ctrl+X - 
+\f2\i0 \uc0\u1074 \u1099 \u1075 \u1088 \u1091 \u1078 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1080 \u1076 \u1077 \u1085 \u1090 
+\f0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\b \cf6 push
+\f0\b0 \cf0  \cf8 0b800h\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1057 \u1077 \u1075 \u1084 \u1077 \u1085 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1080 \u1076 \u1077 \u1086 \u1087 \u1072 \u1084 \u1103 \u1090 \u1080 
+\f0 \cf0 \
+
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0   
+\f3\b \cf7 bx
+\f0\b0 \cf4 ,\cf8 1920\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1080 \u1076 \u1077 \u1086 \u1087 \u1072 \u1084 \u1103 \u1090 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1091 \u1076 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1091 \u1076 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1090 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f1\i (
+\f2\i0 \uc0\u1089 \u1088 \u1077 \u1076 \u1085 \u1103 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1088 \u1086 \u1082 \u1072 
+\f1\i , 
+\f2\i0 \uc0\u1085 \u1072 \u1095 \u1072 \u1083 \u1086 
+\f1\i )
+\f0\i0 \cf0 \
+
+\f3\b \cf6 lea
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf4 ,\cf0 Unloaded 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 \u1086 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 7\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1077 \u1088 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1094 \u1074 \u1077 \u1090 
+\f0 \cf0 \
+\
+outt\cf4 :
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,
+\f3\b \cf7 cs
+\f0\b0 \cf4 :
+\f3\b \cf11 [\cf7 si\cf11 ]
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1073 \u1077 \u1088 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1080 \u1084 \u1074 \u1086 \u1083 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf10 '$'\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1080 \u1079 \u1085 \u1072 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1085 \u1094 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1088 \u1086 \u1082 \u1080 
+\f0 \cf0 \
+
+\f3\b \cf6 jz
+\f0\b0 \cf0  outex 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1082 \u1086 \u1085 \u1095 \u1080 \u1090 \u1100 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [\cf7 bx\cf11 ]
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1103 \u1084 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1080 \u1076 \u1077 \u1086 \u1087 \u1072 \u1084 \u1103 \u1090 \u1100 
+\f0 \cf0 \
+
+\f3\b \cf6 inc
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1083 \u1077 \u1076 \u1091 \u1102 \u1097 \u1080 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1080 \u1084 \u1074 \u1086 \u1083 
+\f0 \cf0 \
+
+\f3\b \cf6 add
+\f0\b0 \cf0  
+\f3\b \cf7 bx
+\f0\b0 \cf4 ,\cf8 2\cf0 \
+
+\f3\b \cf6 jmp
+\f0\b0 \cf0  outt 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1076 \u1086 \u1083 \u1078 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1074 \u1099 \u1074 \u1086 \u1076 
+\f0 \cf0 \
+\
+outex\cf4 :\cf0 \
+
+\f3\b \cf6 push
+\f0\b0 \cf0  \cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1077 \u1075 \u1084 \u1077 \u1085 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1077 \u1082 \u1090 \u1086 \u1088 \u1086 \u1074 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1081 
+\f0 \cf0 \
+
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf9 word
+\f0\b0 \cf0  ptr 
+\f3\b \cf7 CS
+\f0\b0 \cf4 :\cf0 Old09
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1086 \u1074 \u1083 \u1077 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1077 \u1082 \u1090 \u1086 \u1088 \u1086 \u1074 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1081 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [
+\f0\b0 \cf8 24h
+\f3\b \cf11 ]
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf9 word
+\f0\b0 \cf0  ptr 
+\f3\b \cf7 CS
+\f0\b0 \cf4 :\cf0 Old09\cf4 +\cf8 2\cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [
+\f0\b0 \cf8 26h
+\f3\b \cf11 ]
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf9 word
+\f0\b0 \cf0  ptr 
+\f3\b \cf7 CS
+\f0\b0 \cf4 :\cf0 Old2d\
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [
+\f0\b0 \cf8 0b4h
+\f3\b \cf11 ]
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf9 word
+\f0\b0 \cf0  ptr 
+\f3\b \cf7 CS
+\f0\b0 \cf4 :\cf0 Old2d\cf4 +\cf8 2\cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [
+\f0\b0 \cf8 0b6h
+\f3\b \cf11 ]
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf7 CS
+\f0\b0 \cf4 :
+\f3\b \cf11 [
+\f0\b0 \cf8 2Ch
+\f3\b \cf11 ]
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1089 \u1077 \u1075 \u1084 \u1077 \u1085 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1077 \u1088 \u1077 \u1084 \u1077 \u1085 \u1085 \u1099 \u1093 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1082 \u1088 \u1091 \u1078 \u1077 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+
+\f3\b \cf6 dec
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1075 \u1086 
+\f1\i  MCB
+\f0\i0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [
+\f0\b0 \cf8 1
+\f3\b \cf11 ]
+\f0\b0 \cf4 ,
+\f3\b \cf9 word
+\f0\b0 \cf0  ptr \cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1047 \u1072 \u1087 \u1080 \u1089 \u1099 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 \u1072 
+\f1\i  Owner=0, 
+\f2\i0 \uc0\u1079 \u1085 \u1072 \u1095 \u1080 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1074 \u1086 \u1073 \u1086 \u1076 \u1077 \u1085 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf7 CS
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1089 \u1077 \u1075 \u1084 \u1077 \u1085 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1072 \u1084 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1080 \u1076 \u1077 \u1085 \u1090 \u1072 
+\f0 \cf0 \
+
+\f3\b \cf6 dec
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1075 \u1086 
+\f1\i  MCB
+\f0\i0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [
+\f0\b0 \cf8 1
+\f3\b \cf11 ]
+\f0\b0 \cf4 ,
+\f3\b \cf9 word
+\f0\b0 \cf0  ptr \cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1047 \u1072 \u1087 \u1080 \u1089 \u1099 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 \u1072 
+\f1\i  Owner=0, 
+\f2\i0 \uc0\u1079 \u1085 \u1072 \u1095 \u1080 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1074 \u1086 \u1073 \u1086 \u1076 \u1077 \u1085 
+\f0 \cf0 \
+
+\f3\b \cf6 jmp
+\f0\b0 \cf0  skipwork\
+\
+ne_x\cf4 :\cf0  
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 1Fh\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 \u1072 
+\f1\i  S
+\f0\i0 \cf0 \
+
+\f3\b \cf6 jnz
+\f0\b0 \cf0  skipwork 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1077 \u1090 
+\f1\i , 
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1087 \u1091 \u1089 \u1090 \u1080 \u1090 \u1100 
+\f0 \cf0 \
+
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 cs
+\f0\b0 \cf4 :\cf0 ctrl\cf4 ,\cf8 0\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  ctrl 
+\f2\i0 \uc0\u1085 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 \u1072 
+\f1\i , 
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1087 \u1091 \u1089 \u1090 \u1080 \u1090 \u1100 
+\f0 \cf0 \
+
+\f3\b \cf6 jz 
+\f0\b0 \cf0 skipwork\
+
+\f3\b \cf6 jmp
+\f0\b0 \cf0  newmode 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1055 \u1077 \u1088 \u1077 \u1093 \u1086 \u1076 
+\f1\i  
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  Ctrl+S
+\f0\i0 \cf0 \
+\'a0\
+skipwork\cf4 :\cf0 \
+
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 ds
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1077 \u1075 \u1084 \u1077 \u1085 \u1090 \u1085 \u1099 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f0 \cf0 \
+
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf0 \
+
+\f3\b \cf6 popa
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1097 \u1077 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+
+\f3\b \cf6 sti
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1088 \u1072 \u1079 \u1088 \u1077 \u1096 \u1080 \u1090 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+
+\f3\b \cf6 iret
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1074 \u1099 \u1093 \u1086 \u1076 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f0 \cf0 \
+\'a0\
+\pard\pardeftab720\partightenfactor0
+
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1053 \u1072 \u1095 \u1080 \u1085 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1087 \u1091 \u1089 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1099 
+\f0 \cf0 \
+newmode\cf4 :\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf0 mode\
+
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 1\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1091 \u1078 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1082 \u1090 \u1080 \u1074 \u1080 \u1088 \u1086 \u1074 \u1072 \u1085 \u1072 
+\f1\i ?
+\f0\i0 \cf0 \
+
+\f3\b \cf6 jz
+\f0\b0 \cf0  skipwork 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1072 
+\f1\i , 
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1089 \u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1099 \u1075 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1072 \u1083 \u1100 \u1085 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1095 \u1080 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1072 \u1081 \u1084 \u1077 \u1088 \u1072 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  mode\cf4 ,\cf8 1\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1082 \u1090 \u1080 \u1074 \u1080 \u1088 \u1086 \u1074 \u1072 \u1085 \u1072 
+\f0 \cf0 \
+
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 bp
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1058 \u1077 \u1087 \u1077 \u1088 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1086 \u1079 \u1074 \u1088 \u1072 \u1090 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1077 \u1082 \u1091 \u1097 \u1091 \u1102 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1091 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 bp
+\f0\b0 \cf4 ,
+\f3\b \cf7 sp
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf11 [\cf7 bp
+\f0\b0 \cf4 +\cf8 22
+\f3\b \cf11 ]
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  old_ip\cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf11 [\cf7 bp
+\f0\b0 \cf4 +\cf8 24
+\f3\b \cf11 ]
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  old_cs\cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf11 [\cf7 bp
+\f0\b0 \cf4 +\cf8 26
+\f3\b \cf11 ]
+\f0\b0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  old_f\cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1080 
+\f1\i  
+\f2\i0 \uc0\u1077 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 \u1080 
+\f1\i , 
+\f2\i0 \uc0\u1095 \u1090 \u1086 \u1073 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1075 \u1076 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1084 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1082 \u1088 \u1086 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1085 \u1092 \u1086 \u1088 \u1084 \u1072 \u1094 \u1080 \u1102 
+\f1\i  
+\f2\i0 \uc0\u1086 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1077 
+\f1\i , 
+\f2\i0 \uc0\u1084 \u1086 \u1078 \u1085 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1099 \u1083 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1077 \u1088 \u1085 \u1091 \u1090 \u1100 \u1089 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1091 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1100 \u1079 \u1086 \u1074 \u1072 \u1090 \u1077 \u1083 \u1103 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf9 word
+\f0\b0 \cf0  ptr 
+\f3\b \cf11 [\cf7 bp
+\f0\b0 \cf4 +\cf8 22
+\f3\b \cf11 ]
+\f0\b0 \cf4 ,\cf0 offset infomode 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1086 \u1076 \u1084 \u1077 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1082 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1086 \u1079 \u1074 \u1088 \u1072 \u1090 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1074 \u1086 \u1076 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf11 [\cf7 bp
+\f0\b0 \cf4 +\cf8 24
+\f3\b \cf11 ]
+\f0\b0 \cf4 ,
+\f3\b \cf7 cs
+\f0\b0 \cf0 \
+
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 bp
+\f0\b0 \cf0 \
+
+\f3\b \cf6 jmp
+\f0\b0 \cf0  skipwork 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1079 \u1072 \u1074 \u1077 \u1088 \u1096 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+\'a0\
+infomode\cf4 :\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1056 \u1077 \u1078 \u1080 \u1084 
+\f0 \cf0 \
+\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1057 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 ds
+\f0\b0 \cf0  \'a0 \'a0 \'a0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pushad
+\f0\b0 \cf0 \
+\'a0\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 cs
+\f0\b0 \cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1085 \u1072 \u1089 \u1090 \u1088 \u1072 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1072 \u1085 \u1085 \u1099 \u1093 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 ds
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 0fh\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 10h\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 03\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1058 \u1077 \u1082 \u1091 \u1097 \u1080 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1078 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1077 \u1082 \u1089 \u1090 \u1086 \u1074 \u1099 \u1081 
+\f1\i ?
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 jnz
+\f0\b0 \cf0  bad_mode \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1077 \u1090 
+\f1\i  - 
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1087 \u1091 \u1089 \u1082 \u1072 \u1077 \u1084 
+\f1\i  
+\f0\i0 \cf0 \
+\'a0\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf8 0b800h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1057 \u1077 \u1075 \u1084 \u1077 \u1085 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 \u1085 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1084 \u1103 \u1090 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1083 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1103 \u1084 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1086 \u1089 \u1090 \u1091 \u1087 \u1072 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 cx
+\f0\b0 \cf4 ,\cf8 2000\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 lea
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf4 ,\cf0 scrbuf \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1057 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1088 \u1077 \u1079 \u1077 \u1088 \u1074 \u1080 \u1088 \u1086 \u1074 \u1072 \u1085 \u1085 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1091 \u1092 \u1077 \u1088 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 xor
+\f0\b0 \cf0  
+\f3\b \cf7 di
+\f0\b0 \cf4 ,
+\f3\b \cf7 di
+\f0\b0 \cf0 \
+zz1\cf4 :\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [\cf7 di\cf11 ]
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf11 [\cf7 si\cf11 ]
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 inc
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 inc
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 inc
+\f0\b0 \cf0  
+\f3\b \cf7 di
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 inc
+\f0\b0 \cf0  
+\f3\b \cf7 di
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 loop
+\f0\b0 \cf0  zz1\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 cx
+\f0\b0 \cf4 ,\cf8 2000\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1086 \u1095 \u1080 \u1097 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 xor
+\f0\b0 \cf0  
+\f3\b \cf7 di
+\f0\b0 \cf4 ,
+\f3\b \cf7 di
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf8 0f20h\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 repnz
+\f0\b0 \cf0  
+\f3\b \cf6 stosw
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 cs
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;es=cs
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 3\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 bh
+\f0\b0 \cf4 ,\cf8 0\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 10h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1073 \u1077 \u1088 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1077 \u1082 \u1091 \u1097 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1086 \u1088 \u1076 \u1080 \u1085 \u1072 \u1090 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1091 \u1088 \u1089 \u1086 \u1088 \u1072 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  curpos\cf4 ,
+\f3\b \cf7 dx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1093 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 dx
+\f0\b0 \cf4 ,\cf8 0\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 2\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 10h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1091 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1091 \u1088 \u1089 \u1086 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1077 \u1088 \u1093 \u1085 \u1080 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1083 \u1077 \u1074 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1091 \u1075 \u1086 \u1083 
+\f0 \cf0 \
+inpdrv\cf4 :\cf0 \
+puts inputdrv 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1089 \u1100 \u1073 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1074 \u1077 \u1089 \u1090 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1091 \u1082 \u1074 \u1091 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 1\cf0 \
+
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 21h\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1086 \u1078 \u1080 \u1076 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1074 \u1086 \u1076 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1080 \u1084 \u1074 \u1086 \u1083 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1089 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1083 \u1072 \u1074 \u1080 \u1072 \u1090 \u1091 \u1088 \u1099 
+\f0 \cf0 \
+
+\f3\b \cf6 and
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 1fh\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1086 \u1089 \u1090 \u1072 \u1074 \u1083 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1086 \u1083 \u1100 \u1082 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1084 \u1083 \u1072 \u1076 \u1096 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1080 \u1090 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1080 \u1084 \u1074 \u1086 \u1083 \u1072 
+\f1\i (
+\f2\i0 \uc0\u1085 \u1086 \u1084 \u1077 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f1\i  1-A,2-B...)
+\f0\i0 \cf0 \
+
+\f3\b \cf6 test
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,
+\f3\b \cf7 al
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1086 \u1083 \u1100 
+\f1\i (
+\f2\i0 \uc0\u1088 \u1072 \u1089 \u1096 \u1080 \u1088 \u1077 \u1085 \u1085 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1076 
+\f1\i )
+\f0\i0 \cf0 \
+
+\f3\b \cf6 jnz
+\f0\b0 \cf0  cont2\
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 1\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1090 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1090 \u1086 \u1088 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1076 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1072 \u1089 \u1096 \u1080 \u1088 \u1077 \u1085 \u1085 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1076 \u1072 
+\f0 \cf0 \
+
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 21h\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1091 \u1092 \u1077 \u1088 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1083 \u1072 \u1074 \u1080 \u1072 \u1090 \u1091 \u1088 \u1099 
+\f0 \cf0 \
+
+\f3\b \cf6 jmp
+\f0\b0 \cf0  inpdrv 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1080 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1089 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1085 \u1086 \u1074 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1074 \u1077 \u1089 \u1090 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1091 \u1082 \u1074 \u1091 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+cont2\cf4 :\cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  drv\cf4 ,
+\f3\b \cf7 al
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1086 \u1084 \u1077 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 dl
+\f0\b0 \cf4 ,
+\f3\b \cf7 al
+\f0\b0 \cf0 \
+
+\f3\b \cf6 add
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 40h\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1086 \u1073 \u1088 \u1072 \u1079 \u1091 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1086 \u1084 \u1077 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1091 \u1082 \u1074 \u1091 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  rp1\cf4 +\cf8 7\cf4 ,
+\f3\b \cf7 al
+\f0\b0 \cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1076 \u1086 \u1073 \u1072 \u1074 \u1083 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1077 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 32h\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1060 \u1091 \u1085 \u1082 \u1094 \u1080 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1091 \u1095 \u1077 \u1085 \u1080 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1088 \u1072 \u1084 \u1077 \u1090 \u1088 \u1086 \u1074 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 21h
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1091 \u1095 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1088 \u1072 \u1084 \u1077 \u1090 \u1088 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 cmp
+\f0\b0 \cf0  
+\f3\b \cf7 al
+\f0\b0 \cf4 ,\cf8 0ffh\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  ff - 
+\f2\i0 \uc0\u1079 \u1085 \u1072 \u1095 \u1080 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1072 \u1082 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1077 \u1090 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 jnz
+\f0\b0 \cf0  cont1\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 puts wrongdrv \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1096 \u1080 \u1073 \u1082 \u1091 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 jmp
+\f0\b0 \cf0  inpdrv \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1080 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1089 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1074 \u1077 \u1089 \u1090 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1085 \u1086 \u1074 \u1086 
+\f0 \cf0 \
+cont1\cf4 :\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 ds
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;es=ds
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 cs
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 ds
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;ds=cs
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 bx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1084 \u1077 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1072 \u1085 \u1085 \u1099 \u1093 
+\f1\i  
+\f2\i0 \uc0\u1086 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 puts rp1 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1077 \u1088 \u1074 \u1086 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 36h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1080 \u1085 \u1092 \u1086 \u1088 \u1084 \u1072 \u1094 \u1080 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1086 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1072 \u1079 \u1084 \u1077 \u1088 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 dl
+\f0\b0 \cf4 ,\cf0 drv \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1085 \u1086 \u1084 \u1077 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 21h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1091 \u1095 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1085 \u1092 \u1086 \u1088 \u1084 \u1072 \u1094 \u1080 \u1102 
+\f1\i  
+\f2\i0 \uc0\u1086 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1072 \u1079 \u1084 \u1077 \u1088 \u1077 
+\f0 \cf0 \
+
+\f1\i \cf5 ; * INT 21 - DISK SPACE
+\f0\i0 \cf0 \
+
+\f1\i \cf5 ; * * * *AH = 36H
+\f0\i0 \cf0 \
+
+\f1\i \cf5 ; * * * *DL = DRIVE NUMBER (1-4)
+\f0\i0 \cf0 \
+
+\f1\i \cf5 ; * * * *Return: AX = ? (SIDES)
+\f0\i0 \cf0 \
+
+\f1\i \cf5 ; * * * * * * * *BX = ? (BLOCKS FREE)
+\f0\i0 \cf0 \
+
+\f1\i \cf5 ; * * * * * * * *CX = ? (BLOCK SIZE)
+\f0\i0 \cf0 \
+
+\f1\i \cf5 ; * * * * * * * *DX = ? (TOTAL BLOCKS)
+\f0\i0 \cf0 \
+
+\f1\i \cf5 ;NOTE: MULT AX x CX x BX for FREE SPACE ON DISK
+\f0\i0 \cf0 \
+
+\f1\i \cf5 ;MULT AX x CX x DX for TOTAL DISK SPACE
+\f0\i0 \cf0 \
+\'a0\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 movzx
+\f0\b0 \cf0  
+\f3\b \cf7 eax
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1088 \u1072 \u1089 \u1096 \u1080 \u1088 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1091 \u1095 \u1077 \u1085 \u1085 \u1099 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1088 \u1072 \u1084 \u1077 \u1090 \u1088 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1086 
+\f1\i  32 
+\f2\i0 \uc0\u1073 \u1080 \u1090 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 movzx
+\f0\b0 \cf0  
+\f3\b \cf7 ebx
+\f0\b0 \cf4 ,
+\f3\b \cf7 bx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 movzx
+\f0\b0 \cf0  
+\f3\b \cf7 ecx
+\f0\b0 \cf4 ,
+\f3\b \cf7 cx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 movzx
+\f0\b0 \cf0  
+\f3\b \cf7 edx
+\f0\b0 \cf4 ,
+\f3\b \cf7 dx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 eax
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1088 \u1072 \u1084 \u1077 \u1090 \u1088 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 ebx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 ecx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mul
+\f0\b0 \cf0  
+\f3\b \cf7 edx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;AX x CX x DX for TOTAL DISK SPACE
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mul
+\f0\b0 \cf0  
+\f3\b \cf7 ecx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 
+\f1\i  eax 
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1091 \u1095 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1072 \u1079 \u1084 \u1077 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 call
+\f0\b0 \cf0  printdec32 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1077 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 puts rp2 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1090 \u1086 \u1088 \u1086 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 ecx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1072 \u1085 \u1085 \u1099 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1086 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1072 \u1079 \u1084 \u1077 \u1088 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1080 \u1089 \u1082 \u1072 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 ebx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 eax
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mul
+\f0\b0 \cf0  
+\f3\b \cf7 ebx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  
+\f1\i \cf5 ;MULT AX x CX x BX for FREE SPACE ON DISK
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mul
+\f0\b0 \cf0  
+\f3\b \cf7 ecx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1091 \u1095 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1074 \u1086 \u1073 \u1086 \u1076 \u1085 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 \u1098 \u1077 \u1084 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 call
+\f0\b0 \cf0  printdec32 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1077 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 puts rp3 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1090 \u1088 \u1077 \u1090 \u1100 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 bx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1072 \u1085 \u1085 \u1099 \u1093 
+\f1\i (
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1085 \u1099 \u1093 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1093 \u1086 \u1076 \u1080 \u1090 \u1089 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  es:bx)
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [\cf7 bx
+\f0\b0 \cf4 +\cf8 2
+\f3\b \cf11 ]
+\f1\i\b0 \cf5 ;
+\f2\i0 \uc0\u1073 \u1077 \u1088 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1072 \u1081 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1077 \u1082 \u1090 \u1086 \u1088 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 call
+\f0\b0 \cf0  printdec \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 puts rp4 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  4-
+\f2\i0 \uc0\u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 movzx
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf0  
+\f3\b \cf9 byte
+\f0\b0 \cf0  ptr 
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [\cf7 bx
+\f0\b0 \cf4 +\cf8 4
+\f3\b \cf11 ]
+\f1\i\b0 \cf5 ;
+\f2\i0 \uc0\u1073 \u1077 \u1088 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1077 \u1082 \u1090 \u1086 \u1088 \u1086 \u1074 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1083 \u1072 \u1089 \u1090 \u1077 \u1088 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 call
+\f0\b0 \cf0  printdec \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 puts rp5 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  5-
+\f2\i0 \uc0\u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 movzx
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf0  
+\f3\b \cf9 byte
+\f0\b0 \cf0  ptr 
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [\cf7 bx
+\f0\b0 \cf4 +\cf8 8
+\f3\b \cf11 ]
+\f1\i\b0 \cf5 ;
+\f2\i0 \uc0\u1073 \u1077 \u1088 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1087 \u1080 \u1081 
+\f1\i  FAT
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 call
+\f0\b0 \cf0  printdec \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 puts rp6 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  6-
+\f2\i0 \uc0\u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf0  
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [\cf7 bx
+\f0\b0 \cf4 +\cf8 9
+\f3\b \cf11 ]
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1073 \u1077 \u1088 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1087 \u1080 \u1081 
+\f1\i  FAT
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 call
+\f0\b0 \cf0  printdec \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 puts rp7 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  7-
+\f2\i0 \uc0\u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 movzx
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf0  
+\f3\b \cf9 byte
+\f0\b0 \cf0  ptr 
+\f3\b \cf7 es
+\f0\b0 \cf4 :
+\f3\b \cf11 [\cf7 bx
+\f0\b0 \cf4 +\cf8 15
+\f3\b \cf11 ]
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1073 \u1077 \u1088 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1083 \u1086 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1077 \u1082 \u1090 \u1086 \u1088 \u1086 \u1074 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1076 \u1085 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1087 \u1080 \u1080 
+\f1\i  FAT
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 call
+\f0\b0 \cf0  printdec \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f0 \cf0 \
+\'a0\
+\'a0\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 puts anykey \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1089 \u1100 \u1073 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1086 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 \u1080 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1083 \u1102 \u1073 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1083 \u1072 \u1074 \u1080 \u1096 \u1080 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 0\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 16h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1086 \u1078 \u1080 \u1076 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1078 \u1072 \u1090 \u1080 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1083 \u1102 \u1073 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1083 \u1072 \u1074 \u1080 \u1096 \u1080 
+\f0 \cf0 \
+\'a0\
+\'a0\
+back\cf4 :\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  \cf8 0b800h\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 cx
+\f0\b0 \cf4 ,\cf8 2000\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1101 \u1082 \u1088 \u1072 \u1085 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 lea
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf4 ,\cf0 scrbuf\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 xor
+\f0\b0 \cf0  
+\f3\b \cf7 di
+\f0\b0 \cf4 ,
+\f3\b \cf7 di
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 repnz
+\f0\b0 \cf0  
+\f3\b \cf6 movsw
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 2\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 bh
+\f0\b0 \cf4 ,\cf8 0\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 dx
+\f0\b0 \cf4 ,\cf0 curpos\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 10h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1078 \u1085 \u1077 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1086 \u1078 \u1077 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1091 \u1088 \u1089 \u1086 \u1088 \u1072 
+\f0 \cf0 \
+bad_mode\cf4 :\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  mode\cf4 ,\cf8 0\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1092 \u1086 \u1085 \u1086 \u1074 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1078 \u1080 \u1084 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf11 [
+\f0\b0 \cf0 old_f
+\f3\b \cf11 ]
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 \u1080 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 popf
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 popad
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 ds
+\f0\b0 \cf0  \'a0 \'a0 \'a0 
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1087 \u1086 \u1084 \u1077 \u1097 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1072 
+\f1\i  ds 
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1082 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 es
+\f0\b0 \cf0  \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1079 \u1072 \u1087 \u1080 \u1089 \u1099 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  es 
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1082 \u1072 
+\f0 \cf0 \
+\'a0\
+
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1086 \u1079 \u1074 \u1088 \u1072 \u1097 \u1072 \u1077 \u1084 \u1089 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1082 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1074 \u1072 \u1085 \u1085 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  
+\f3\b \cf9 db
+\f0\b0 \cf0  \cf4 *\cf0  \cf8 0EAh\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1086 \u1087 \u1082 \u1086 \u1076 
+\f1\i  far jump
+\f0\i0 \cf0 \
+old_ip \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf9 dw
+\f0\b0 \cf0  \cf8 0\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1074 \u1072 \u1085 \u1085 \u1091 \u1102 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1091 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1086 \u1083 \u1100 \u1079 \u1086 \u1074 \u1072 \u1090 \u1077 \u1083 \u1103 
+\f0 \cf0 \
+old_cs \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf9 dw
+\f0\b0 \cf0  \cf8 0\cf0 \
+endp\
+\'a0\
+
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1086 \u1073 \u1088 \u1072 \u1079 \u1086 \u1074 \u1072 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1093 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1077 \u1089 \u1103 \u1090 \u1080 \u1095 \u1085 \u1091 \u1102 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1080 \u1089 \u1090 \u1077 \u1084 \u1091 
+\f1\i  
+\f2\i0 \uc0\u1080 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 
+\f0 \cf0 \
+printdec proc \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1086 \u1073 \u1088 \u1072 \u1079 \u1086 \u1074 \u1072 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1080 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1093 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;ax - 
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1086 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 cx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 dx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 bx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 xor
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf4 ,
+\f3\b \cf7 si
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1086 \u1073 \u1085 \u1091 \u1083 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1092 \u1083 \u1072 \u1075 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1090 \u1088 \u1080 \u1094 \u1072 \u1090 \u1077 \u1083 \u1100 \u1085 \u1086 \u1075 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1072 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 bx
+\f0\b0 \cf4 ,\cf8 10\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1086 \u1089 \u1085 \u1086 \u1074 \u1072 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1080 \u1089 \u1090 \u1077 \u1084 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 XOR
+\f0\b0 \cf0  
+\f3\b \cf7 CX
+\f0\b0 \cf4 ,
+\f3\b \cf7 CX
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1093 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1091 \u1076 \u1077 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1094 \u1080 \u1092 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1077 \u1089 \u1103 \u1090 \u1080 \u1095 \u1085 \u1086 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 test
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,
+\f3\b \cf7 ax
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1090 \u1088 \u1080 \u1094 \u1072 \u1090 \u1077 \u1083 \u1100 \u1085 \u1086 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 jns
+\f0\b0 \cf0  @@m1 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1072 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 neg
+\f0\b0 \cf0  
+\f3\b \cf7 ax
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1084 \u1077 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1085 \u1072 \u1082 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 inc
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1091 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1080 \u1079 \u1085 \u1072 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1090 \u1088 \u1080 \u1094 \u1072 \u1090 \u1077 \u1083 \u1100 \u1085 \u1086 \u1089 \u1090 \u1080 
+\f0 \cf0 \
+@@m1\cf4 :\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 XOR
+\f0\b0 \cf0  
+\f3\b \cf7 dx
+\f0\b0 \cf4 ,
+\f3\b \cf7 dx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 DIV
+\f0\b0 \cf0  
+\f3\b \cf7 bx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1076 \u1077 \u1083 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1087 \u1077 \u1085 \u1080 
+\f1\i  10
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 PUSH
+\f0\b0 \cf0  
+\f3\b \cf7 DX
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1080 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1089 \u1090 \u1072 \u1090 \u1086 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1077 \u1083 \u1077 \u1085 \u1080 \u1103 
+\f1\i (
+\f2\i0 \uc0\u1082 \u1086 \u1101 \u1092 \u1092 \u1080 \u1094 \u1080 \u1077 \u1085 \u1090 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1087 \u1077 \u1085 \u1103 \u1093 
+\f1\i ) 
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1082 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 INC
+\f0\b0 \cf0  
+\f3\b \cf7 CX
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 TEST
+\f0\b0 \cf0  
+\f3\b \cf7 AX
+\f0\b0 \cf4 ,
+\f3\b \cf7 AX
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 JNZ
+\f0\b0 \cf0  @@m1\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 test
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf4 ,
+\f3\b \cf7 si
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1077 \u1089 \u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1090 \u1088 \u1080 \u1094 \u1072 \u1090 \u1077 \u1083 \u1100 \u1085 \u1086 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 jz
+\f0\b0 \cf0  @@m22\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  \cf4 -\cf8 3\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1090 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1095 \u1072 \u1083 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1072 \u1074 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1085 \u1072 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1084 \u1080 \u1085 \u1091 \u1089 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 inc
+\f0\b0 \cf0  
+\f3\b \cf7 cx
+\f0\b0 \cf0 \
+@@m22\cf4 :\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 2\cf0 \
+@@m2\cf4 :\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 POP
+\f0\b0 \cf0  
+\f3\b \cf7 DX
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 ADD
+\f0\b0 \cf0  
+\f3\b \cf7 DL
+\f0\b0 \cf4 ,\cf10 '0'\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1086 \u1073 \u1088 \u1072 \u1079 \u1086 \u1074 \u1099 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  ASCII 
+\f2\i0 \uc0\u1089 \u1080 \u1084 \u1074 \u1086 \u1083 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 21h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1099 \u1074 \u1086 \u1076 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1077 \u1075 \u1086 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 LOOP
+\f0\b0 \cf0  @@m2 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1089 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1094 \u1080 \u1092 \u1088 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 si
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 bx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 POP
+\f0\b0 \cf0  
+\f3\b \cf7 dx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 POP
+\f0\b0 \cf0  
+\f3\b \cf7 cx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 RET
+\f0\b0 \cf0 \
+printdec endp\
+\'a0\
+printdec32 proc \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1086 \u1073 \u1088 \u1072 \u1079 \u1086 \u1074 \u1072 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1093 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1077 \u1089 \u1103 \u1090 \u1080 \u1095 \u1085 \u1091 \u1102 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1088 \u1086 \u1082 \u1091 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1072 \u1076 \u1088 \u1077 \u1089 \u1091 
+\f1\i  es:di
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;eax - 
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1086 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 ecx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 edx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 push
+\f0\b0 \cf0  
+\f3\b \cf7 ebx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ebx
+\f0\b0 \cf4 ,\cf8 10\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1086 \u1089 \u1085 \u1086 \u1074 \u1072 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1080 \u1089 \u1090 \u1077 \u1084 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 XOR
+\f0\b0 \cf0  
+\f3\b \cf7 ecx
+\f0\b0 \cf4 ,
+\f3\b \cf7 ecx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1093 
+\f1\i  
+\f2\i0 \uc0\u1073 \u1091 \u1076 \u1077 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1082 \u1086 \u1083 \u1080 \u1095 \u1077 \u1089 \u1090 \u1074 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1094 \u1080 \u1092 \u1088 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1077 \u1089 \u1103 \u1090 \u1080 \u1095 \u1085 \u1086 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1077 
+\f0 \cf0 \
+@m1\cf4 :\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 XOR
+\f0\b0 \cf0  
+\f3\b \cf7 edx
+\f0\b0 \cf4 ,
+\f3\b \cf7 edx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 DIV
+\f0\b0 \cf0  
+\f3\b \cf7 ebx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1076 \u1077 \u1083 \u1080 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1087 \u1077 \u1085 \u1080 
+\f1\i  10
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 PUSH
+\f0\b0 \cf0  
+\f3\b \cf7 edx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1080 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1089 \u1090 \u1072 \u1090 \u1086 \u1082 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1076 \u1077 \u1083 \u1077 \u1085 \u1080 \u1103 
+\f1\i (
+\f2\i0 \uc0\u1082 \u1086 \u1101 \u1092 \u1092 \u1080 \u1094 \u1080 \u1077 \u1085 \u1090 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1087 \u1077 \u1085 \u1103 \u1093 
+\f1\i ) 
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1090 \u1077 \u1082 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 INC
+\f0\b0 \cf0  
+\f3\b \cf7 ecx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 TEST
+\f0\b0 \cf0  
+\f3\b \cf7 eax
+\f0\b0 \cf4 ,
+\f3\b \cf7 eax
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 JNZ
+\f0\b0 \cf0  @m1\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 2\cf0 \
+@m2\cf4 :\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 POP
+\f0\b0 \cf0  
+\f3\b \cf7 edx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 ADD
+\f0\b0 \cf0  
+\f3\b \cf7 DL
+\f0\b0 \cf4 ,\cf10 '0'\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1086 \u1073 \u1088 \u1072 \u1079 \u1086 \u1074 \u1099 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1095 \u1080 \u1089 \u1083 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  ASCII 
+\f2\i0 \uc0\u1089 \u1080 \u1084 \u1074 \u1086 \u1083 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 21h\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 LOOP
+\f0\b0 \cf0  @m2 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1089 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1094 \u1080 \u1092 \u1088 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 pop
+\f0\b0 \cf0  
+\f3\b \cf7 ebx
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1072 \u1074 \u1083 \u1080 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1099 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 POP
+\f0\b0 \cf0  
+\f3\b \cf7 edx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 POP
+\f0\b0 \cf0  
+\f3\b \cf7 ecx
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 RET
+\f0\b0 \cf0 \
+printdec32 endp\
+\'a0\
+inst\cf4 :\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1079 \u1072 \u1075 \u1088 \u1091 \u1079 \u1082 \u1072 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1080 \u1076 \u1077 \u1085 \u1090 \u1072 
+\f0 \cf0 \
+
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1086 \u1089 \u1090 \u1072 \u1074 \u1083 \u1103 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1080 \u1076 \u1077 \u1085 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1084 \u1103 \u1090 \u1080 
+\f0 \cf0 \
+NoParameters\cf4 :\cf0 \
+\'a0\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf7 AL
+\f0\b0 \cf4 ,\cf8 98h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1079 \u1072 \u1075 \u1088 \u1091 \u1078 \u1077 \u1085 
+\f1\i  
+\f2\i0 \uc0\u1083 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1080 \u1076 \u1077 \u1085 \u1090 
+\f1\i ?
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf8 2Dh\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1057 \u1083 \u1091 \u1078 \u1077 \u1073 \u1085 \u1086 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1077 \u1088 \u1099 \u1074 \u1072 \u1085 \u1080 \u1077 
+\f0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 cmp
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf7 AL
+\f0\b0 \cf4 ,\cf8 99h\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  
+\f3\b \cf6 je
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0 TSRAlreadyLoaded
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1074 \u1099 \u1093 \u1086 \u1076 
+\f1\i , 
+\f2\i0 \uc0\u1095 \u1090 \u1086 \u1073 \u1099 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 \u1073 \u1077 \u1078 \u1072 \u1090 \u1100 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1086 \u1074 \u1090 \u1086 \u1088 \u1085 \u1086 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1075 \u1088 \u1091 \u1079 \u1082 \u1080 
+\f0 \cf0 \
+\'a0\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf8 3509h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ; GetVector
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf8 21h\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf9 word
+\f0\b0 \cf0  \cf4 *\cf0 ptr \cf4 *\cf0 Old09\cf4 ,
+\f3\b \cf7 BX
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf9 word
+\f0\b0 \cf0  \cf4 *\cf0 ptr \cf4 *\cf0 Old09\cf4 +\cf8 2\cf4 ,
+\f3\b \cf7 ES
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf8 2509h\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ; SetVector
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf7 dx
+\f0\b0 \cf4 ,\cf0 offset \cf4 *\cf0 New09Obrab\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf8 21h\cf0 \
+\'a0\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf8 352Dh\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ; GetVector
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf8 21h\cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf9 word
+\f0\b0 \cf0  \cf4 *\cf0 ptr \cf4 *\cf0 Old2D\cf4 ,
+\f3\b \cf7 BX
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf9 word
+\f0\b0 \cf0  \cf4 *\cf0 ptr \cf4 *\cf0 Old2D\cf4 +\cf8 2\cf4 ,
+\f3\b \cf7 ES
+\f0\b0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf7 ax
+\f0\b0 \cf4 ,\cf8 252Dh\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f1\i \cf5 ; SetVector
+\f0\i0 \cf0 \
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 mov
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf7 dx
+\f0\b0 \cf4 ,\cf0 offset \cf4 *\cf0 New2DObrab\
+\cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf0  \cf4 *\cf8 21h\cf0 \
+\'a0\
+puts Success 
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1073 
+\f1\i  
+\f2\i0 \uc0\u1091 \u1089 \u1087 \u1077 \u1093 \u1077 
+\f0 \cf0 \
+\'a0\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 dx
+\f0\b0 \cf4 ,
+\f3\b \cf11 (
+\f0\b0 \cf0 inst\cf4 -
+\f3\b \cf9 start
+\f0\b0 \cf4 +\cf8 100h
+\f3\b \cf11 )
+\f1\i\b0 \cf5 ; 
+\f2\i0 \uc0\u1091 \u1082 \u1072 \u1079 \u1099 \u1074 \u1072 \u1077 \u1084 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1080 \u1089 \u1090 \u1077 \u1084 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1089 \u1082 \u1086 \u1083 \u1100 \u1082 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1084 \u1103 \u1090 \u1080 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1088 \u1072 \u1075 \u1088 \u1072 \u1092 \u1072 \u1093 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1085 \u1080 \u1084 \u1072 \u1077 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1085 \u1072 \u1096 
+\f1\i  
+\f2\i0 \uc0\u1088 \u1077 \u1079 \u1080 \u1076 \u1077 \u1085 \u1090 
+\f0 \cf0 \
+
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 27h
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1079 \u1072 \u1082 \u1086 \u1085 \u1095 \u1080 \u1090 \u1100 
+\f1\i , 
+\f2\i0 \uc0\u1085 \u1086 
+\f1\i  
+\f2\i0 \uc0\u1086 \u1089 \u1090 \u1072 \u1090 \u1100 \u1089 \u1103 
+\f1\i  
+\f2\i0 \uc0\u1074 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1072 \u1084 \u1103 \u1090 \u1080 
+\f0 \cf0 \
+\'a0\
+TSRAlreadyLoaded\cf4 :\cf0 \
+puts AlreadyLoaded 
+\f1\i \cf5 ;
+\f2\i0 \uc0\u1056 \u1077 \u1079 \u1080 \u1076 \u1077 \u1085 \u1090 
+\f1\i  
+\f2\i0 \uc0\u1091 \u1078 \u1077 
+\f1\i  
+\f2\i0 \uc0\u1079 \u1072 \u1075 \u1088 \u1091 \u1078 \u1077 \u1085 
+\f0 \cf0 \
+Quit\cf4 :\cf0 \
+
+\f3\b \cf6 mov
+\f0\b0 \cf0  
+\f3\b \cf7 ah
+\f0\b0 \cf4 ,\cf8 4ch\cf0  
+\f1\i \cf5 ; 
+\f2\i0 \uc0\u1089 \u1090 \u1072 \u1085 \u1076 \u1072 \u1088 \u1090 \u1085 \u1099 \u1081 
+\f1\i  
+\f2\i0 \uc0\u1074 \u1099 \u1093 \u1086 \u1076 
+\f1\i  
+\f2\i0 \uc0\u1080 \u1079 
+\f1\i  
+\f2\i0 \uc0\u1087 \u1088 \u1086 \u1075 \u1088 \u1072 \u1084 \u1084 \u1099 
+\f0 \cf0 \
+
+\f3\b \cf6 int
+\f0\b0 \cf0  \cf8 21h\cf0 \
+\'a0\
+end 
+\f3\b \cf9 start}
